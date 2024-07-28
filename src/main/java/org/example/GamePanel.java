@@ -9,11 +9,11 @@ import java.util.Random;
 public class GamePanel extends JPanel implements Runnable {
 
     static final int GAME_WIDTH = 1000;
-    static final int GAME_HEIGHT = (int) (GAME_WIDTH*0.5);
+    static final int GAME_HEIGHT = (int) (GAME_WIDTH*0.555);
 
     static final Dimension SCREEN_SIZE = new Dimension(GAME_WIDTH, GAME_HEIGHT);
 
-    static final int BALL_DIAMETER = 200;
+    static final int BALL_DIAMETER = 20;
     static final int PADDLE_WIDTH = 25;
     static final int PADDLE_HEIGHT = 100;
 
@@ -120,7 +120,7 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
         long lastTime = System.nanoTime();
-        double amountOfTicks = 200;
+        double amountOfTicks = 60;
         double ns = 1_000_000_000/amountOfTicks;
         double delta = 0;
         while (true){
